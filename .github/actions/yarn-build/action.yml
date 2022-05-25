@@ -1,0 +1,25 @@
+name: "Build"
+description: "Build with yarn"
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    default: '16'
+  working-dir:
+    required: true
+    type: string
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v2
+      with:
+        node-version: ${{ inputs.node-version }}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - uses: vtno/seei/.github/actions/yarn-cache@main
+    - name: Install Dependencies From Cache
+      run: yarn install -offline --frozen-lockfile
+      shell: bash
+    - name: Unit Test
+      run: yarn test
+      shell: bash
+      working-directory: ${{ inputs.working-dir }}

@@ -4,4 +4,4 @@ jobs:
   call-build-workflow:
     uses: vtno/seei/.github/workflows/build.yml@main
     with:
-      working_dir: .
+      working-dir: .
