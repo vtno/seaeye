@@ -20,7 +20,8 @@ jobs:
         shell: bash
     steps:
       - uses: vtno/seei/.github/actions/yarn-install@main
-
+        with:
+          working-dir: example
   build:
     name: "Build"
     runs-on: ubuntu-latest
