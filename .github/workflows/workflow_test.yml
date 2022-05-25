@@ -1,5 +1,8 @@
 name: Testing Build & Release
-on: push
+on: 
+  push:
+    paths-ignore:
+      - *.md
 jobs:
   call-build-workflow:
     uses: vtno/seei/.github/workflows/build.yml@main
