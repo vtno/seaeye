@@ -64,4 +64,4 @@ jobs:
       working-dir: example
 ```
 
-2. Using `Yarn Test` action - [build.yml](https://github.com/vtno/seei/blob/main/.github/workflows/build.yml#L42)
+2. Using `Yarn Test` action - [build.yml](https://github.com/vtno/seei/blob/main/.github/workflows/build.yml#L46-L48)
