@@ -1,11 +1,15 @@
 name: "Yarn Install"
 description: "Install deps with yarn"
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    default: '16'
 runs:
   using: "composite"    
   steps:
     - uses: actions/setup-node@v2
       with:
-        node-version: "16"
+        node-version: ${{ inputs.node-version }}
     - name: Checkout
       uses: actions/checkout@v2
     - name: Install Dependencies
