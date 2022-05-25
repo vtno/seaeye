@@ -39,17 +39,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: vtno/seei/.github/actions/yarn-cache@main
-      - name: Install Dependencies From Cache
-        run: yarn install -offline --frozen-lockfile
-      - name: Unit Test
-        run: yarn test
-        working-directory: ${{ inputs.working-dir }}
+      - uses: vtno/seei/.github/actions/yarn-test@main
 
   lint:
     name: "Lint"
@@ -59,14 +49,4 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-      - name: Checkout
-        uses: actions/checkout@v2
-      - uses: vtno/seei/.github/actions/yarn-cache@main
-      - name: Install Dependencies From Cache
-        run: yarn install -offline --frozen-lockfile
-      - name: Unit Test
-        run: yarn lint
-        working-directory: ${{ inputs.working-dir }}
+      - uses: vtno/seei/.github/actions/yarn-lint@main
