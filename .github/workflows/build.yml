@@ -43,6 +43,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - uses: vtno/seei/.github/actions/yarn-cache@main
+      - name: Install Dependencies From Cache
+        run: yarn install -offline --frozen-lockfile
       - name: Unit Test
         run: yarn build
         working-directory: ${{ inputs.working_dir }}
@@ -61,6 +63,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - uses: vtno/seei/.github/actions/yarn-cache@main
+      - name: Install Dependencies From Cache
+        run: yarn install -offline --frozen-lockfile
       - name: Unit Test
         run: yarn test
         working-directory: ${{ inputs.working_dir }}
