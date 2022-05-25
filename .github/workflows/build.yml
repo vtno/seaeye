@@ -45,7 +45,7 @@ jobs:
       - uses: vtno/seei/.github/actions/yarn-cache@main
       - name: Install Dependencies From Cache
         run: yarn install -offline --frozen-lockfile
-      - name: Unit Test
+      - name: Build
         run: yarn build
         working-directory: ${{ inputs.working_dir }}
 

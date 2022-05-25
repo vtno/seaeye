@@ -1,3 +1,5 @@
+import { main } from '..'
+
 it('passed', () => {
-  expect(true).toBe(true)
+  expect(main()).toBe(true)
 })
