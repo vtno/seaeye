@@ -12,6 +12,9 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 
 ```yaml
 - uses: vtno/seei/.github/actions/yarn-build@main
+  with:
+    node-version: "16" # override the default version here
+    working-dir: "." # override working dir to run the command here
 ```
 
 - Yarn Install - install deps and cache using Yarn Cache action
@@ -20,6 +23,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - uses: vtno/seei/.github/actions/yarn-install@main
   with:
     node-version: "16" # override the default version here
+    working-dir: "." # override working dir to run the command here
 ```
 
 - Yarn Build - build with cached deps
@@ -28,6 +32,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - uses: vtno/seei/.github/actions/yarn-build@main
   with:
     node-version: "16" # override the default version here
+    working-dir: "." # override working dir to run the command here
 ```
 
 - Yarn Test - test with cached deps
@@ -36,6 +41,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - uses: vtno/seei/.github/actions/yarn-test@main
   with:
     node-version: "16" # override the default version here
+    working-dir: "." # override working dir to run the command here
 ```
 
 - Yarn Lint - lint with cached deps
@@ -44,6 +50,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - uses: vtno/seei/.github/actions/yarn-lint@main
   with:
     node-version: "16" # override the default version here
+    working-dir: "." # override working dir to run the command here
 ```
 
 ## Examples

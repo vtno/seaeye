@@ -4,6 +4,9 @@ inputs:
   node-version:
     description: 'Node.js version to use'
     default: '16'
+  working-dir:
+    required: true
+    type: string
 runs:
   using: "composite"    
   steps:
