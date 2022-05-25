@@ -56,5 +56,12 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 ## Examples
 
 1. Using the `build` workflow - [workflow_test.yml](https://github.com/vtno/seei/blob/main/.github/workflows/workflow_test.yml)
+```yaml
+jobs:
+  call-build-workflow:
+    uses: vtno/seei/.github/workflows/build.yml@main
+    with:
+      working-dir: example
+```
 
 2. Using `Yarn Test` action - [build.yml](https://github.com/vtno/seei/blob/main/.github/workflows/build.yml#L42)
