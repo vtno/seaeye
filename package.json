@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "echo test!",
+    "test": "echo test!",
+    "lint": "echo lint!"
+  }
+}
