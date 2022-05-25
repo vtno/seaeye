@@ -30,6 +30,8 @@ jobs:
         shell: bash
     steps:
       - uses: vtno/seei/.github/actions/yarn-build@main
+        with:
+          working-dir: example
 
   test:
     name: "Test"
@@ -40,6 +42,8 @@ jobs:
         shell: bash
     steps:
       - uses: vtno/seei/.github/actions/yarn-test@main
+        with:
+          working-dir: example
 
   lint:
     name: "Lint"
@@ -50,3 +54,5 @@ jobs:
         shell: bash
     steps:
       - uses: vtno/seei/.github/actions/yarn-lint@main
+        with:
+          working-dir: example
