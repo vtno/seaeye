@@ -21,7 +21,8 @@ jobs:
     steps:
       - uses: vtno/seei/.github/actions/yarn-install@main
         with:
-          working-dir: example
+          working-dir: ${{ inputs.working-dir }}
+
   build:
     name: "Build"
     runs-on: ubuntu-latest
@@ -32,7 +33,7 @@ jobs:
     steps:
       - uses: vtno/seei/.github/actions/yarn-build@main
         with:
-          working-dir: example
+          working-dir: ${{ inputs.working-dir }}
 
   test:
     name: "Test"
@@ -44,7 +45,7 @@ jobs:
     steps:
       - uses: vtno/seei/.github/actions/yarn-test@main
         with:
-          working-dir: example
+          working-dir: ${{ inputs.working-dir }}
 
   lint:
     name: "Lint"
@@ -56,4 +57,4 @@ jobs:
     steps:
       - uses: vtno/seei/.github/actions/yarn-lint@main
         with:
-          working-dir: example
+          working-dir: ${{ inputs.working-dir }}

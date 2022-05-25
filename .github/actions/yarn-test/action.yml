@@ -18,7 +18,8 @@ runs:
     - uses: vtno/seei/.github/actions/yarn-cache@main
     - name: Install Dependencies From Cache
       run: yarn install -offline --frozen-lockfile
-      shell: bash
+      shell: 
+      working-directory: ${{ inputs.working-dir }}
     - name: Test
       run: yarn test
       shell: bash

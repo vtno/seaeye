@@ -19,6 +19,7 @@ runs:
     - name: Install Dependencies From Cache
       run: yarn install -offline --frozen-lockfile
       shell: bash
+      working-directory: ${{ inputs.working-dir }}
     - name: Build
       run: yarn build
       shell: bash
