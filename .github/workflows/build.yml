@@ -19,15 +19,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "16"
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install Dependencies
-        run: yarn install --prefer-offline --frozen-lockfile
-        working-directory: ${{ inputs.working-dir }}
-      - uses: vtno/seei/.github/actions/yarn-cache@main
+      - uses: vtno/seei/.github/actions/yarn-install@main
 
   build:
     name: "Build"
