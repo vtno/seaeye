@@ -1,4 +1,4 @@
-# SEE-I 👀
+# SEA-EYE 👀
 
 No frils collection of common actions and pre-made workflows for TypeScript project that uses `yarn@v1` as package manager.
 
