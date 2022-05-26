@@ -17,7 +17,7 @@ runs:
       uses: actions/checkout@v2
     - uses: vtno/seaeye/.github/actions/yarn-cache@main
     - name: Install Dependencies From Cache
-      run: yarn install -offline --frozen-lockfile
+      run: yarn install --prefer-offline --frozen-lockfile
       shell: 
       working-directory: ${{ inputs.working-dir }}
     - name: Test
