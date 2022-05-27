@@ -5,6 +5,6 @@ on:
       - '*.md'
 jobs:
   call-build-workflow:
-    uses: vtno/seaeye/.github/workflows/build.yml@main
+    uses: vtno/seaeye/.github/workflows/build.yml@v0.1.0
     with:
       working-dir: example
