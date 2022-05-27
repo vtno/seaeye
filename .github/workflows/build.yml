@@ -19,7 +19,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: vtno/seaeye/.github/actions/yarn-install@main
+      - uses: vtno/seaeye/.github/actions/yarn-install@v0.1.0
         with:
           working-dir: ${{ inputs.working-dir }}
 
@@ -31,7 +31,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: vtno/seaeye/.github/actions/yarn-build@main
+      - uses: vtno/seaeye/.github/actions/yarn-build@v0.1.0
         with:
           working-dir: ${{ inputs.working-dir }}
 
@@ -43,7 +43,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: vtno/seaeye/.github/actions/yarn-test@main
+      - uses: vtno/seaeye/.github/actions/yarn-test@v0.1.0
         with:
           working-dir: ${{ inputs.working-dir }}
 
@@ -55,6 +55,6 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: vtno/seaeye/.github/actions/yarn-lint@main
+      - uses: vtno/seaeye/.github/actions/yarn-lint@v0.1.0
         with:
           working-dir: ${{ inputs.working-dir }}
