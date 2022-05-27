@@ -15,7 +15,7 @@ runs:
         node-version: ${{ inputs.node-version }}
     - name: Checkout
       uses: actions/checkout@v2
-    - uses: vtno/seaeye/.github/actions/yarn-cache@main
+    - uses: vtno/seaeye/.github/actions/yarn-cache@v0.1.0
     - name: Install Dependencies From Cache
       run: yarn install --prefer-offline --frozen-lockfile
       shell: bash

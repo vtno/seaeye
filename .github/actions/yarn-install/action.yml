@@ -19,4 +19,4 @@ runs:
       run: yarn install --prefer-offline --frozen-lockfile
       shell: bash
       working-directory: ${{ inputs.working-dir }}
-    - uses: vtno/seaeye/.github/actions/yarn-cache@main
+    - uses: vtno/seaeye/.github/actions/yarn-cache@v0.1.0
