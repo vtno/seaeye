@@ -11,7 +11,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - Yarn Cache - cache installed deps
 
 ```yaml
-- uses: vtno/seaeye/.github/actions/yarn-build@main
+- uses: vtno/seaeye/.github/actions/yarn-build@v0.1.0
   with:
     node-version: "16" # override the default version here
     working-dir: "." # override working dir to run the command here
@@ -20,7 +20,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - Yarn Install - install deps and cache using Yarn Cache action
 
 ```yaml
-- uses: vtno/seaeye/.github/actions/yarn-install@main
+- uses: vtno/seaeye/.github/actions/yarn-install@v0.1.0
   with:
     node-version: "16" # override the default version here
     working-dir: "." # override working dir to run the command here
@@ -29,7 +29,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - Yarn Build - build with cached deps
 
 ```yaml
-- uses: vtno/seaeye/.github/actions/yarn-build@main
+- uses: vtno/seaeye/.github/actions/yarn-build@v0.1.0
   with:
     node-version: "16" # override the default version here
     working-dir: "." # override working dir to run the command here
@@ -38,7 +38,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - Yarn Test - test with cached deps
 
 ```yaml
-- uses: vtno/seaeye/.github/actions/yarn-test@main
+- uses: vtno/seaeye/.github/actions/yarn-test@v0.1.0
   with:
     node-version: "16" # override the default version here
     working-dir: "." # override working dir to run the command here
@@ -47,7 +47,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 - Yarn Lint - lint with cached deps
 
 ```yaml
-- uses: vtno/seaeye/.github/actions/yarn-lint@main
+- uses: vtno/seaeye/.github/actions/yarn-lint@v0.1.0
   with:
     node-version: "16" # override the default version here
     working-dir: "." # override working dir to run the command here
@@ -55,13 +55,13 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 
 ## Examples
 
-1. Using the `build` workflow - [workflow_test.yml](https://github.com/vtno/seei/blob/main/.github/workflows/workflow_test.yml)
+1. Using the `build` workflow - [workflow_test.yml](https://github.com/vtno/seei/blob/v0.1.0/.github/workflows/workflow_test.yml)
 ```yaml
 jobs:
   call-build-workflow:
-    uses: vtno/seaeye/.github/workflows/build.yml@main
+    uses: vtno/seaeye/.github/workflows/build.yml@v0.1.0
     with:
       working-dir: example
 ```
 
-2. Using `Yarn Test` action - [build.yml](https://github.com/vtno/seei/blob/main/.github/workflows/build.yml#L46-L48)
+2. Using `Yarn Test` action - [build.yml](https://github.com/vtno/seei/blob/v0.1.0/.github/workflows/build.yml#L46-L48)
