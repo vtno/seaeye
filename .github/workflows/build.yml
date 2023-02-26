@@ -6,9 +6,12 @@ on:
       working-dir:
         required: true
         type: string
+      concurrency-group:
+        required: false
+        type: string
 
 concurrency:
-  group: ${GITHUB_REF#refs/heads/}
+  group: ${{ inputs.concurrency-group || github.head_ref }}
   cancel-in-progress: true
 
 jobs:
