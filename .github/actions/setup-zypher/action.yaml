@@ -1,0 +1,20 @@
+name: 'Install Zypher'
+description: 'Install Zypher encryption tool'
+inputs:
+  zypher-version:
+    description: 'Zypher version to use'
+    default: '0.2.0'
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Go environment
+      uses: actions/setup-go@v4.0.1
+      with:
+        go-version: '1.20'
+    - name: Add GO bin to PATH
+      shell: bash
+      run: |
+        echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+    - name: Install Zypher
+      shell: bash
+      run: go install github.com/vtno/zypher/cmd/zypher@${{ inputs.zypher-version }}
