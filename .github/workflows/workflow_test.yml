@@ -8,6 +8,6 @@ on:
       - main
 jobs:
   call-build-workflow:
-    uses: npcopter/seaeye/.github/workflows/build.yml@ea4e641298b558505600c3c90f1617a8d9f7f4bb
+    uses: npcopter/seaeye/.github/workflows/build.yml@add-setup-node
     with:
       working-dir: example
