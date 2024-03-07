@@ -8,3 +8,9 @@ jobs:
     uses: vtno/seaeye/.github/workflows/build.yml@v0.1.0
     with:
       working-dir: example
+
+  call-build-workflow-with-node-version:
+    uses: vtno/seaeye/.github/workflows/build.yml@ea4e641298b558505600c3c90f1617a8d9f7f4bb
+    with:
+      working-dir: example
+      node-version: '18'
