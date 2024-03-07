@@ -4,8 +4,6 @@ on:
     paths-ignore:
       - '*.md'
   pull_request:
-    branches:
-      - main
 jobs:
   call-build-workflow:
     uses: vtno/seaeye/.github/workflows/build.yml@ea4e641298b558505600c3c90f1617a8d9f7f4bb
