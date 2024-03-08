@@ -11,3 +11,5 @@ jobs:
     uses: npcopter/seaeye/.github/workflows/build.yml@add-setup-node
     with:
       working-dir: example
+      node-version: '18'
+      concurrency-group: 'test'
