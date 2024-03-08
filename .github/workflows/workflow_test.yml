@@ -3,8 +3,13 @@ on:
   push:
     paths-ignore:
       - '*.md'
+  pull_request:
+    branches:
+      - main
 jobs:
   call-build-workflow:
-    uses: vtno/seaeye/.github/workflows/build.yml@v0.1.0
+    uses: npcopter/seaeye/.github/workflows/build.yml@refactor-node-version
     with:
       working-dir: example
+      node-version: '18'
+      concurrency-group: 'test'
