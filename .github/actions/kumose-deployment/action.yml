@@ -1,32 +1,27 @@
-name: 'Kumose Deployment'
-
-description: 'Trigger Kumose Deployment'
-
+name: "Kumose Deployment"
+description: "Trigger Kumose Deployment"
 inputs:
   basic_auth_token:
-    description: 'The basic authentication token'
+    description: "The basic authentication token"
     required: true
   kumose_app_id:
-    description: 'The Kumose application ID'
+    description: "The Kumose application ID"
     required: true
   version:
-    description: 'The version to deploy'
+    description: "The version to deploy"
     required: true
-
 runs:
   using: "composite"
   steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
     - name: Install curl
       run: sudo apt-get install -y curl
-
     - name: Trigger Kumose Deployment
       run: |
         curl -X POST \
-        -H 'Content-Type: application/json' \
-        -H 'Accept: application/json' \
+        -H "Content-Type: application/json" \
+        -H "Accept: application/json" \
         -H "Authorization: Basic ${{ inputs.basic_auth_token }}" \
         https://app.kumose.com/apps/${{ inputs.kumose_app_id }}/deployments \
-        -d '{"deployment": {"version": "${{ inputs.version }}"}}'
+        -d "{"deployment": {"version": "${{ inputs.version }}"}}"
