@@ -15,8 +15,6 @@ runs:
   steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-    - name: Install curl
-      run: sudo apt-get install -y curl
     - name: Trigger Kumose Deployment
       run: |
         curl -X POST \
@@ -25,3 +23,4 @@ runs:
         -H "Authorization: Basic ${{ inputs.basic_auth_token }}" \
         https://app.kumose.com/apps/${{ inputs.kumose_app_id }}/deployments \
         -d "{"deployment": {"version": "${{ inputs.version }}"}}"
+      shell: bash
