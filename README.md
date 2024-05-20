@@ -55,7 +55,7 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
 
 - Kumose Deployment - trigger for Kumose deployment
 ```yaml
-- uses: vtno/seaeye/.github/actions/kumose-deployment@v0.4.0
+- uses: vtno/seaeye/.github/actions/kumose-deployment@v0.4.1
   with:
     basic_auth_token: "" # Provide the basic auth token here
     kumose_app_id: "" # Provide the Kumose app ID here

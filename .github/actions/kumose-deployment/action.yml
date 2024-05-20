@@ -22,5 +22,6 @@ runs:
         -H "Accept: application/json" \
         -H "Authorization: Basic ${{ inputs.basic_auth_token }}" \
         https://app.kumose.com/apps/${{ inputs.kumose_app_id }}/deployments \
-        -d "{"deployment": {"version": "${{ inputs.version }}"}}"
+        -d '{"deployment": {"version": "${{ inputs.version }}"}}' \
+        -f
       shell: bash
