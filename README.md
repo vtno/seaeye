@@ -53,6 +53,15 @@ No frils collection of common actions and pre-made workflows for TypeScript proj
     working-dir: "." # override working dir to run the command here
 ```
 
+- Kumose Deployment - trigger for Kumose deployment
+```yaml
+- uses: vtno/seaeye/.github/actions/kumose-deployment@v0.4.0
+  with:
+    basic_auth_token: "" # Provide the basic auth token here
+    kumose_app_id: "" # Provide the Kumose app ID here
+    version: "latest" # Specify the version here
+```
+
 ## Examples
 
 1. Using the `build` workflow - [workflow_test.yml](https://github.com/vtno/seei/blob/v0.1.0/.github/workflows/workflow_test.yml)
